@@ -153,13 +153,13 @@ export default function SurahReader() {
         {/* Ayat List */}
         <div className="space-y-6">
           {displayedAyat.map((ayat, index) => (
-              <AyatCard
-                key={ayat.no_ayat}
-                ayat={ayat}
-                isLast={index === displayedAyat.length - 1}
-                ref={index === displayedAyat.length - 1 ? lastAyatRef : null}
-              />
-            ))}
+            <AyatCard
+              key={ayat.no_ayat}
+              ayat={ayat}
+              isLast={index === displayedAyat.length - 1}
+              ref={index === displayedAyat.length - 1 ? lastAyatRef : null}
+            />
+          ))}
         </div>
 
         {/* Loading More Indicator */}
@@ -221,7 +221,7 @@ const AyatCard = forwardRef<
     ayat: Ayat;
     isLast: boolean;
   }
->(({ ayat, isLast }, ref) => {
+>(({ ayat }, ref) => {
   return (
     <div
       ref={ref}
