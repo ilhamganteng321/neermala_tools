@@ -1,0 +1,1142 @@
+[
+    {
+        "arti_surat": "Pembukaan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 7,
+        "nm_surat": "AL-FATIHAH",
+        "nm_surat2": "AL-FÃTIHAH",
+        "no_surat": 1,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Sapi Betina",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 286,
+        "nm_surat": "AL-BAQARAH",
+        "nm_surat2": "AL-BAQARAH",
+        "no_surat": 2,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Keluarga Imran",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 200,
+        "nm_surat": "ALI-IMRAN",
+        "nm_surat2": "ÃLI-IMRÃN",
+        "no_surat": 3,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Wanita",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 176,
+        "nm_surat": "AN-NISA",
+        "nm_surat2": "AN-NISÃ’",
+        "no_surat": 4,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Hidangan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 120,
+        "nm_surat": "AL-MAIDAH",
+        "nm_surat2": "AL-MÃ’IDAH",
+        "no_surat": 5,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Binatang Ternak",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 165,
+        "nm_surat": "AL-ANAM",
+        "nm_surat2": "AL-AN’ÃM",
+        "no_surat": 6,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Tempat Tertinggi",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 206,
+        "nm_surat": "AL-ARAF",
+        "nm_surat2": "AL-A’RÃF",
+        "no_surat": 7,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Rampasan Perang",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 75,
+        "nm_surat": "AL-ANFAL",
+        "nm_surat2": "AL-ANFÃL",
+        "no_surat": 8,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Pengampunan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 129,
+        "nm_surat": "AT-TAUBAH",
+        "nm_surat2": "AT-TAUBAH",
+        "no_surat": 9,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Nabi Yunus",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 109,
+        "nm_surat": "YUNUS",
+        "nm_surat2": "YÚNUS",
+        "no_surat": 10,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nabi Hud",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 123,
+        "nm_surat": "HUD",
+        "nm_surat2": "HÚD",
+        "no_surat": 11,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nabi Yusuf",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 111,
+        "nm_surat": "YUSUF",
+        "nm_surat2": "YÚSUF",
+        "no_surat": 12,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Guruh/Petir",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 43,
+        "nm_surat": "AR-RAD",
+        "nm_surat2": "AR-RA’D",
+        "no_surat": 13,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nabi Ibrahim",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 52,
+        "nm_surat": "IBRAHIM",
+        "nm_surat2": "IBRÃHIM",
+        "no_surat": 14,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Pegunungan Hijr",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 99,
+        "nm_surat": "AL-HIJR",
+        "nm_surat2": "AL-HIJR",
+        "no_surat": 15,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Lebah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 128,
+        "nm_surat": "AN-NAHL",
+        "nm_surat2": "AN-NAHL",
+        "no_surat": 16,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Perjalanan Malam",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 111,
+        "nm_surat": "AL-ISRA",
+        "nm_surat2": "AL-ISRÃ’",
+        "no_surat": 17,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Gua",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 110,
+        "nm_surat": "AL-KAHF",
+        "nm_surat2": "AL-KAHF",
+        "no_surat": 18,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Maryam",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 98,
+        "nm_surat": "MARYAM",
+        "nm_surat2": "MARYAM",
+        "no_surat": 19,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Taha",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 135,
+        "nm_surat": "TA HA",
+        "nm_surat2": "TÃ HÃ",
+        "no_surat": 20,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nabi-Nabi",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 112,
+        "nm_surat": "AL-ANBIYA",
+        "nm_surat2": "AL-ANBIYÃ’",
+        "no_surat": 21,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Haji",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 78,
+        "nm_surat": "AL-HAJJ",
+        "nm_surat2": "AL-HAJJ",
+        "no_surat": 22,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Orang-Orang Beriman",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 118,
+        "nm_surat": "AL-MUMINUN",
+        "nm_surat2": "AL-MU’MINÚN",
+        "no_surat": 23,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Cahaya",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 64,
+        "nm_surat": "AN-NUR",
+        "nm_surat2": "AN-NÚR",
+        "no_surat": 24,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Pembeda",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 77,
+        "nm_surat": "AL-FURQAN",
+        "nm_surat2": "AL-FURQÃN",
+        "no_surat": 25,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Para Penyair",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 227,
+        "nm_surat": "ASY-SYUARA",
+        "nm_surat2": "ASY-SYU’ARÃ’",
+        "no_surat": 26,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Semut",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 93,
+        "nm_surat": "AN-NAML",
+        "nm_surat2": "AN-NAML",
+        "no_surat": 27,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Kisah-Kisah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 88,
+        "nm_surat": "AL-QASAS",
+        "nm_surat2": "AL-QASAS",
+        "no_surat": 28,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Laba-laba",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 69,
+        "nm_surat": "AL-ANKABUT",
+        "nm_surat2": "AL-’ANKABÚT",
+        "no_surat": 29,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bangsa Romawi",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 60,
+        "nm_surat": "AR-RUM",
+        "nm_surat2": "AR-RÚM",
+        "no_surat": 30,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Lukman",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 34,
+        "nm_surat": "LUQMAN",
+        "nm_surat2": "LUQMÃN",
+        "no_surat": 31,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Sujud",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 30,
+        "nm_surat": "AS-SAJDAH",
+        "nm_surat2": "AS-SAJDAH",
+        "no_surat": 32,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Golongan yang Bersekutu",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 73,
+        "nm_surat": "AL-AHZAB",
+        "nm_surat2": "AL-AHZÃB",
+        "no_surat": 33,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Kaum Saba`",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 54,
+        "nm_surat": "SABA",
+        "nm_surat2": "SABA’",
+        "no_surat": 34,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Pencipta",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 45,
+        "nm_surat": "FATIR",
+        "nm_surat2": "FÃTIR",
+        "no_surat": 35,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Ya Sin",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 83,
+        "nm_surat": "YA SIN",
+        "nm_surat2": "YÃ SÍN",
+        "no_surat": 36,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Bersaf-saf",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 182,
+        "nm_surat": "AS-SAFFAT",
+        "nm_surat2": "AS-SÃFFÃT",
+        "no_surat": 37,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Sad",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 88,
+        "nm_surat": "SAD",
+        "nm_surat2": "SÃD",
+        "no_surat": 38,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Rombongan-Rombongan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 75,
+        "nm_surat": "AZ-ZUMAR",
+        "nm_surat2": "AZ-ZUMAR",
+        "no_surat": 39,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Mengampuni",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 85,
+        "nm_surat": "GAFIR",
+        "nm_surat2": "GÃFIR",
+        "no_surat": 40,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Dijelaskan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 54,
+        "nm_surat": "FUSSILAT",
+        "nm_surat2": "FUSSILAT",
+        "no_surat": 41,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Musyawarah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 53,
+        "nm_surat": "ASY-SYURA",
+        "nm_surat2": "ASY-SYÚRÃ",
+        "no_surat": 42,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Perhiasan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 89,
+        "nm_surat": "AZ-ZUKHRUF",
+        "nm_surat2": "AZ-ZUKHRUF",
+        "no_surat": 43,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Kabut",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 59,
+        "nm_surat": "AD-DUKHAN",
+        "nm_surat2": "AD-DUKHÃN",
+        "no_surat": 44,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Berlutut",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 37,
+        "nm_surat": "AL-JASIYAH",
+        "nm_surat2": "AL-JÃSIYAH",
+        "no_surat": 45,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bukit-Bukit Pasir",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 35,
+        "nm_surat": "AL-AHQAF",
+        "nm_surat2": "AL-AHQÃF",
+        "no_surat": 46,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nabi Muhammad Saw.",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 38,
+        "nm_surat": "MUHAMMAD",
+        "nm_surat2": "MUHAMMAD",
+        "no_surat": 47,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Kemenangan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 29,
+        "nm_surat": "AL-FATH",
+        "nm_surat2": "AL-FATH",
+        "no_surat": 48,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Kamar-Kamar",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 18,
+        "nm_surat": "AL-HUJURAT",
+        "nm_surat2": "AL-HUJURÃT",
+        "no_surat": 49,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Qaf",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 45,
+        "nm_surat": "QAF",
+        "nm_surat2": "QÃF",
+        "no_surat": 50,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Angin yang Menerbangkan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 60,
+        "nm_surat": "AZ-ZARIYAT",
+        "nm_surat2": "AZ-ZÃRIYÃT",
+        "no_surat": 51,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bukit",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 49,
+        "nm_surat": "AT-TUR",
+        "nm_surat2": "AT-TÚR",
+        "no_surat": 52,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bintang",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 62,
+        "nm_surat": "AN-NAJM",
+        "nm_surat2": "AN-NAJM",
+        "no_surat": 53,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bulan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 55,
+        "nm_surat": "AL-QAMAR",
+        "nm_surat2": "AL-QAMAR",
+        "no_surat": 54,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Maha Pemurah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 78,
+        "nm_surat": "AR-RAHMAN",
+        "nm_surat2": "AR-RAHMÃN",
+        "no_surat": 55,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Hari Kiamat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 96,
+        "nm_surat": "AL-WAQI'AH",
+        "nm_surat2": "AL-WÃQI’AH",
+        "no_surat": 56,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Besi",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 29,
+        "nm_surat": "AL-HADID",
+        "nm_surat2": "AL-HADÍD",
+        "no_surat": 57,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Gugatan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 22,
+        "nm_surat": "AL-MUJADALAH",
+        "nm_surat2": "AL-MUJÃDALAH",
+        "no_surat": 58,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Pengusiran",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 24,
+        "nm_surat": "AL-HASYR",
+        "nm_surat2": "AL-HASYR",
+        "no_surat": 59,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Perempuan yang Diuji",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 13,
+        "nm_surat": "AL-MUMTAHANAH",
+        "nm_surat2": "AL-MUMTAHANAH",
+        "no_surat": 60,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Barisan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 14,
+        "nm_surat": "AS-SAFF",
+        "nm_surat2": "AS-SAFF",
+        "no_surat": 61,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Hari Jumat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 11,
+        "nm_surat": "AL-JUMUAH",
+        "nm_surat2": "AL-JUMU’AH",
+        "no_surat": 62,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Orang-Orang Munafik",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 11,
+        "nm_surat": "AL-MUNAFIQUN",
+        "nm_surat2": "AL-MUNÃFIQÚN",
+        "no_surat": 63,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Hari Ditampakkan Kesalahan-Kesalahan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 18,
+        "nm_surat": "AT-TAGABUN",
+        "nm_surat2": "AT-TAGÃBUN",
+        "no_surat": 64,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Talak",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 12,
+        "nm_surat": "AT-TALAQ",
+        "nm_surat2": "AT-TALÃQ",
+        "no_surat": 65,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Mengharamkan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 12,
+        "nm_surat": "AT-TAHRIM",
+        "nm_surat2": "AT-TAHRÍM",
+        "no_surat": 66,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Kerajaan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 30,
+        "nm_surat": "AL-MULK",
+        "nm_surat2": "AL-MULK",
+        "no_surat": 67,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Pena",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 52,
+        "nm_surat": "AL-QALAM",
+        "nm_surat2": "AL-QALAM",
+        "no_surat": 68,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Hari kiamat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 52,
+        "nm_surat": "AL-HAQQAH",
+        "nm_surat2": "AL-HÃQQAH",
+        "no_surat": 69,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Tempat-Tempat Naik",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 44,
+        "nm_surat": "AL-MAARIJ",
+        "nm_surat2": "AL-MA’ÃRIJ",
+        "no_surat": 70,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nabi Nuh",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 28,
+        "nm_surat": "NUH",
+        "nm_surat2": "NÚH",
+        "no_surat": 71,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Jin",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 28,
+        "nm_surat": "AL-JINN",
+        "nm_surat2": "AL-JINN",
+        "no_surat": 72,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Orang yang Berselimut",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 20,
+        "nm_surat": "AL-MUZZAMMIL",
+        "nm_surat2": "AL-MUZZAMMIL",
+        "no_surat": 73,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Orang yang Berkemul",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 56,
+        "nm_surat": "AL-MUDDASSIR",
+        "nm_surat2": "AL-MUDDASSIR",
+        "no_surat": 74,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Hari Kiamat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 40,
+        "nm_surat": "AL-QIYAMAH",
+        "nm_surat2": "AL-QIYÃMAH",
+        "no_surat": 75,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Manusia",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 31,
+        "nm_surat": "AL-INSAN",
+        "nm_surat2": "AL-INSÃN",
+        "no_surat": 76,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Malaikat-Malaikat yang Diutus",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 50,
+        "nm_surat": "AL-MURSALAT",
+        "nm_surat2": "AL-MURSALÃT",
+        "no_surat": 77,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Berita Besar",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 40,
+        "nm_surat": "AN-NABA",
+        "nm_surat2": "AN-NABA’",
+        "no_surat": 78,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Malaikat-Malaikat yang Mencabut",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 46,
+        "nm_surat": "AN-NAZIAT",
+        "nm_surat2": "AN-NÃZI’ÃT",
+        "no_surat": 79,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Ia Bermuka masam",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 42,
+        "nm_surat": "ABASA",
+        "nm_surat2": "’ABASA",
+        "no_surat": 80,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Menggulung",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 29,
+        "nm_surat": "AT-TAKWIR",
+        "nm_surat2": "AT-TAKWÍR",
+        "no_surat": 81,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Terbelah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 19,
+        "nm_surat": "AL-INFITAR",
+        "nm_surat2": "AL-INFITÃR",
+        "no_surat": 82,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Orang-orang yang Curang",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 36,
+        "nm_surat": "AL-MUTAFFIFIN",
+        "nm_surat2": "AL-MUTAFFIFÍN",
+        "no_surat": 83,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Terbelah, Terpecah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 25,
+        "nm_surat": "AL-INSYIQAQ",
+        "nm_surat2": "AL-INSYIQÃQ",
+        "no_surat": 84,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Gugusan Bintang",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 22,
+        "nm_surat": "AL-BURUJ",
+        "nm_surat2": "AL-BURÚJ",
+        "no_surat": 85,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Datang di Malam Hari",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 17,
+        "nm_surat": "AT-TARIQ",
+        "nm_surat2": "AT-TÃRIQ",
+        "no_surat": 86,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Yang Paling Tinggi",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 19,
+        "nm_surat": "AL-ALA",
+        "nm_surat2": "AL-A’LÃ",
+        "no_surat": 87,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Peristiwa yang Dahsyat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 26,
+        "nm_surat": "AL-GASYIYAH",
+        "nm_surat2": "AL-GÃSYIYAH",
+        "no_surat": 88,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Fajar",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 30,
+        "nm_surat": "AL-FAJR",
+        "nm_surat2": "AL-FAJR",
+        "no_surat": 89,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Negeri",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 20,
+        "nm_surat": "AL-BALAD",
+        "nm_surat2": "AL-BALAD",
+        "no_surat": 90,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Matahari",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 15,
+        "nm_surat": "ASY-SYAMS",
+        "nm_surat2": "ASY-SYAMS",
+        "no_surat": 91,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Malam",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 21,
+        "nm_surat": "AL-LAIL",
+        "nm_surat2": "AL-LAIL",
+        "no_surat": 92,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Waktu Duha",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 11,
+        "nm_surat": "AD-DUHA",
+        "nm_surat2": "AD-DUHÃ",
+        "no_surat": 93,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Melapangkan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 8,
+        "nm_surat": "ASY-SYARH",
+        "nm_surat2": "ASY-SYARH",
+        "no_surat": 94,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Buah Tin",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 8,
+        "nm_surat": "AT-TIN",
+        "nm_surat2": "AT-TÍN",
+        "no_surat": 95,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Segumpal Darah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 19,
+        "nm_surat": "AL-ALAQ",
+        "nm_surat2": "AL-’ALAQ",
+        "no_surat": 96,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Kemuliaan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 5,
+        "nm_surat": "AL-QADR",
+        "nm_surat2": "AL-QADR",
+        "no_surat": 97,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bukti yang Nyata",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 8,
+        "nm_surat": "AL-BAYYINAH",
+        "nm_surat2": "AL-BAYYINAH",
+        "no_surat": 98,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Kegoncangan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 8,
+        "nm_surat": "AL-ZALZALAH",
+        "nm_surat2": "AL-ZALZALAH",
+        "no_surat": 99,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Kuda Perang yang Berlari kencang",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 11,
+        "nm_surat": "AL-ADIYAT",
+        "nm_surat2": "AL-’ÃDIYÃT",
+        "no_surat": 100,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Hari Kiamat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 11,
+        "nm_surat": "AL-QARIAH",
+        "nm_surat2": "AL-QÃRI’AH",
+        "no_surat": 101,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Bermegah-megahan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 8,
+        "nm_surat": "AT-TAKASUR",
+        "nm_surat2": "AT-TAKÃSUR",
+        "no_surat": 102,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Masa",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 3,
+        "nm_surat": "AL-ASR",
+        "nm_surat2": "AL-’ASR",
+        "no_surat": 103,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Pengumpat",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 9,
+        "nm_surat": "AL-HUMAZAH",
+        "nm_surat2": "AL-HUMAZAH",
+        "no_surat": 104,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Gajah",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 5,
+        "nm_surat": "AL-FIL",
+        "nm_surat2": "AL-FÍL",
+        "no_surat": 105,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Suku Quraisy",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 4,
+        "nm_surat": "QURAISY",
+        "nm_surat2": "QURAISY",
+        "no_surat": 106,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Barang-barang yang Berguna",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 7,
+        "nm_surat": "AL-MAUN",
+        "nm_surat2": "AL-MÃ’ÚN",
+        "no_surat": 107,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Nikmat yang Banyak",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 3,
+        "nm_surat": "AL-KAUSAR",
+        "nm_surat2": "AL-KAUSAR",
+        "no_surat": 108,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Orang-Orang Kafir",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 6,
+        "nm_surat": "AL-KAFIRUN",
+        "nm_surat2": "AL-KÃFIRÚN",
+        "no_surat": 109,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Pertolongan",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 3,
+        "nm_surat": "AN-NASR",
+        "nm_surat2": "AN-NASR",
+        "no_surat": 110,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Gejolak Api",
+        "asb_nuzul": "Ibnu Abbas r.a mengatakan bahwa ketika Rasulullah Saw. naik ke bukit Shafa sambil berseru, \"Mari berkumpul pada pagi hari ini!\" Maka, berkumpulah kaum Quraisy. Rasulullah Saw. bersabda, \"Bagaimana pendapat kalian, sendainya aku beri tahu bahwa musuh akan datang besok pagi atau petang, apakah kalian percaya kepadaku?\" Kaum Quraisy menjawab, \"Pasti kami percaya.\" Rasulullah bersabda kembali, \"Aku peringatkan kalian bahwa siksa Allah yang dahsyat akan datang.\" Maka, Abu Lahab berkata, \"Celakalah kamu! Apakah hanya untuk ini kamu kumpulkan kami?\" Maka, turunlah ayat ini. (Diriwayatkan Imam Bukhari)",
+        "finish": 1,
+        "jml_ayat": 5,
+        "nm_surat": "AL-LAHAB",
+        "nm_surat2": "AL-LAHAB",
+        "no_surat": 111,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Memurnikan Keesaan Allah",
+        "asb_nuzul": "Ibnu Abbas r.a mengatakan bahwa sekelompok Yahudi mendatangi Rasulullah Saw. Di antara mereka ada Ka'ab bin Asyraf dan Huyay bin Akhthab. Mereka bertanya, \"Wahai Muhammad, sebutkanlah sifat-sifat Tuhanmu!\" Maka, turunlah ayat ini. (Diriwayatkan Ibnu Abi Hatim)",
+        "finish": 1,
+        "jml_ayat": 4,
+        "nm_surat": "AL-IKHLAS",
+        "nm_surat2": "Al-IKHLÃS",
+        "no_surat": 112,
+        "tmp_turun": "Makkiyyah"
+    },
+    {
+        "arti_surat": "Waktu Subuh",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 5,
+        "nm_surat": "AL-FALAQ",
+        "nm_surat2": "AL-FALAQ",
+        "no_surat": 113,
+        "tmp_turun": "Madaniyyah"
+    },
+    {
+        "arti_surat": "Manusia",
+        "asb_nuzul": "",
+        "finish": 1,
+        "jml_ayat": 6,
+        "nm_surat": "AN-NAS",
+        "nm_surat2": "AN-NÃS",
+        "no_surat": 114,
+        "tmp_turun": "Madaniyyah"
+    }
+]
