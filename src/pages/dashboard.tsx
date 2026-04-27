@@ -51,6 +51,14 @@ const TOOLS = [
     color: "hover:border-green-500/50 hover:bg-green-50/30",
   },
   {
+    title: "Excel Financial Report Generator",
+    description: "Buat ringkasan laporan keuangan dari data Excel.",
+    icon: <FileText className="w-6 h-6 text-blue-500" />,
+    path: "/report-excel",
+    status: "Ready",
+    color: "hover:border-green-500/50 hover:bg-green-50/30",
+  },
+  {
     title: "PDF Watermark",
     description:
       "Tambahkan teks atau logo watermark ke dokumen PDF Anda secara instan.",
