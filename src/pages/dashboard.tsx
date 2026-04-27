@@ -9,13 +9,11 @@ import { Badge } from "@/components/ui/badge";
 import {
   PenLine,
   FileText,
-  Share2,
   MoveRight,
   Layers,
   BookOpen,
   File,
 } from "lucide-react";
-import { Link } from "react-router-dom"; // Jika kamu menggunakan React Router
 
 const TOOLS = [
   {

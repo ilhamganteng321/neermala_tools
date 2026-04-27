@@ -5,7 +5,6 @@ import SignaturePage from "./pages/signature-page";
 import { Dashboard } from "./pages/dashboard";
 import CodeToImage from "./pages/code-to-image";
 import { Code2 } from "lucide-react";
-import path from "path";
 import QuranList from "./pages/quran";
 import SurahReader from "./components/quran/quran-read";
 import JsonFormatter from "./pages/json-formater";

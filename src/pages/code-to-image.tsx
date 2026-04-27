@@ -13,7 +13,7 @@ import {
 import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
-import { Download, Copy, Check, Code2 } from "lucide-react";
+import { Download, Copy, Check } from "lucide-react";
 import {
   DEFAULT_CODE,
   GRADIENTS,
@@ -22,7 +22,6 @@ import {
   type Language,
   type ThemeName,
 } from "@/data/const";
-import { Link } from "react-router-dom";
 
 const WindowDots = () => (
   <div style={{ display: "flex", gap: "6px", marginBottom: "12px" }}>

@@ -231,37 +231,6 @@ export const SignatureExport: React.FC<SignatureExportProps> = ({
     }
   }, [validateCanvas, fileName, onSuccess, onError]);
 
-  // Cek apakah signature tersedia - DIPERBAIKI (lebih sederhana)
-  const isSignatureAvailable = useCallback((): boolean => {
-    const canvas = getCanvas();
-    if (!canvas) return false;
-
-    try {
-      const context = canvas.getContext("2d");
-      if (!context) return false;
-
-      const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-      const data = imageData.data;
-
-      // Cek apakah ada goresan (bukan background putih/transparan)
-      for (let i = 0; i < data.length; i += 4) {
-        const r = data[i];
-        const g = data[i + 1];
-        const b = data[i + 2];
-        const a = data[i + 3];
-
-        // Deteksi warna yang bukan putih (255,255,255) dan tidak transparan
-        if (!(r === 255 && g === 255 && b === 255) && a > 0) {
-          return true;
-        }
-      }
-      return false;
-    } catch (error) {
-      console.error("Error checking signature:", error);
-      return false;
-    }
-  }, [getCanvas]);
-
   return (
     <div className="flex gap-2 w-full">
       <DropdownMenu>

@@ -13,7 +13,6 @@ import {
   type FilterType,
   type Surah,
 } from "@/data/const";
-import { ModeToggle } from "@/components/mode-toggle";
 
 export default function QuranList() {
   const navigate = useNavigate();

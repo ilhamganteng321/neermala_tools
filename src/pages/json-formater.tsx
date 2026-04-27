@@ -1,5 +1,5 @@
 // src/components/JsonFormatter.tsx
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
 import {
   Copy,
   Check,
@@ -9,7 +9,6 @@ import {
   Upload,
   Trash2,
   Code,
-  Eye,
   Settings,
   AlertCircle,
 } from "lucide-react";
@@ -29,7 +28,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ModeToggle } from "@/components/mode-toggle";
 import JsonTreeView from "@/components/json-formater/tree-view";
 import JsonEditor from "@/components/json-formater/json-editor";
 
@@ -40,7 +38,6 @@ export interface JsonFormatterProps {
 
 export default function JsonFormatter({
   initialValue = "",
-  onSave,
 }: JsonFormatterProps) {
   const [input, setInput] = useState(initialValue);
   const [output, setOutput] = useState("");

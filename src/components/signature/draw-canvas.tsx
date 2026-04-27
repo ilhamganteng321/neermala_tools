@@ -2,7 +2,7 @@ import SignatureCanvas from "react-signature-canvas";
 import { useRef, useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
-import { Trash2, Eraser, AlertCircle } from "lucide-react";
+import { Eraser, AlertCircle } from "lucide-react";
 import { SignatureExport } from "./signature-export";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 

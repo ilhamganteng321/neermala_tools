@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Download, Type } from "lucide-react";
+import { Download } from "lucide-react";
 
 // Definisi pilihan font
 const SIGNATURE_FONTS = [
@@ -28,7 +28,6 @@ export const TextToSignature = () => {
   const [name, setName] = useState("");
   const [selectedFont, setSelectedFont] = useState(SIGNATURE_FONTS[0]);
   const [color, setColor] = useState("#000000");
-  const previewRef = useRef<HTMLDivElement>(null);
 
   // Fungsi untuk download teks sebagai PNG
   const handleDownload = () => {
