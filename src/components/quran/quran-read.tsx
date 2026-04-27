@@ -1,5 +1,5 @@
 // src/components/SurahReader.tsx
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState, useEffect, useCallback, useRef, forwardRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { ChevronLeft, ChevronRight, Loader2, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -153,13 +153,13 @@ export default function SurahReader() {
         {/* Ayat List */}
         <div className="space-y-6">
           {displayedAyat.map((ayat, index) => (
-            <AyatCard
-              key={ayat.no_ayat}
-              ayat={ayat}
-              isLast={index === displayedAyat.length - 1}
-              ref={index === displayedAyat.length - 1 ? lastAyatRef : null}
-            />
-          ))}
+              <AyatCard
+                key={ayat.no_ayat}
+                ayat={ayat}
+                isLast={index === displayedAyat.length - 1}
+                ref={index === displayedAyat.length - 1 ? lastAyatRef : null}
+              />
+            ))}
         </div>
 
         {/* Loading More Indicator */}
@@ -215,18 +215,16 @@ export default function SurahReader() {
 }
 
 // Ayat Card Component with forwardRef for infinite scroll
-const AyatCard = ({
-  ayat,
-  isLast,
-  ref,
-}: {
-  ayat: Ayat;
-  isLast: boolean;
-  ref?: (node: HTMLDivElement | null) => void;
-}) => {
+const AyatCard = forwardRef<
+  HTMLDivElement,
+  {
+    ayat: Ayat;
+    isLast: boolean;
+  }
+>(({ ayat, isLast }, ref) => {
   return (
     <div
-      ref={isLast ? ref : null}
+      ref={ref}
       className="group rounded-xl border border-border bg-card p-4 transition-all hover:border-emerald-500/30 hover:shadow-md sm:p-6"
     >
       {/* Ayat Number */}
@@ -253,4 +251,6 @@ const AyatCard = ({
       </div>
     </div>
   );
-};
+});
+
+AyatCard.displayName = "AyatCard";
