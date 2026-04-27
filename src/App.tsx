@@ -1,13 +1,14 @@
 import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
-import "./App.css";
-import { ModeToggle } from "./components/mode-toggle";
-import SignaturePage from "./pages/signature-page";
-import { Dashboard } from "./pages/dashboard";
-import CodeToImage from "./pages/code-to-image";
+import "@/App.css";
+import { ModeToggle } from "@/components/mode-toggle";
+import SignaturePage from "@/pages/signature-page";
+import { Dashboard } from "@/pages/dashboard";
+import CodeToImage from "@/pages/code-to-image";
 import { Code2 } from "lucide-react";
-import QuranList from "./pages/quran";
-import SurahReader from "./components/quran/quran-read";
-import JsonFormatter from "./pages/json-formater";
+import QuranList from "@/pages/quran";
+import SurahReader from "@/components/quran/quran-read";
+import JsonFormatter from "@/pages/json-formater";
+import ReportExcelPage from "@/pages/report-excel";
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ function App() {
           <Route path="/quran" element={<QuranList />} />
           <Route path="/surah/:noSurat" element={<SurahReader />} />
           <Route path="/json-formater" element={<JsonFormatter />} />
+          <Route path="/report-excel" element={<ReportExcelPage />} />
         </Routes>
       </BrowserRouter>
     </div>

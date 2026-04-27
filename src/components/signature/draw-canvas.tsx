@@ -1,5 +1,5 @@
 import SignatureCanvas from "react-signature-canvas";
-import { useRef, useState, useCallback } from "react";
+import { useRef, useState, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { Eraser, AlertCircle } from "lucide-react";
@@ -8,11 +8,31 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 
 export const DrawCanvas = () => {
   const sigCanvas = useRef<SignatureCanvas>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [penColor, setPenColor] = useState("#000000");
   const [penWidth, setPenWidth] = useState(2);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
   const [hasSignature, setHasSignature] = useState(false);
+  const [canvasSize, setCanvasSize] = useState({ width: 800, height: 300 });
+
+  // ✅ Sync canvas size dengan container
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        const { width } = entry.contentRect;
+        const newWidth = Math.floor(width);
+        const newHeight = Math.floor(width * 0.4); // rasio 5:2
+        setCanvasSize({ width: newWidth, height: newHeight });
+      }
+    });
+
+    observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   const clear = () => {
     sigCanvas.current?.clear();
@@ -21,14 +41,12 @@ export const DrawCanvas = () => {
     setSuccess(null);
   };
 
-  // Fungsi untuk mendapatkan canvas (sama seperti sebelumnya)
   const getCanvasForExport = useCallback((): HTMLCanvasElement | null => {
     if (!sigCanvas.current) return null;
 
     const canvas = sigCanvas.current.getCanvas();
     if (!canvas) return null;
 
-    // Cek apakah canvas kosong
     const context = canvas.getContext("2d");
     if (!context) return null;
 
@@ -39,7 +57,6 @@ export const DrawCanvas = () => {
     const hasDrawing = pixelBuffer.some((color) => color !== 0xffffffff);
     if (!hasDrawing) return null;
 
-    // Manual trimming
     let minX = canvas.width,
       minY = canvas.height,
       maxX = 0,
@@ -48,8 +65,7 @@ export const DrawCanvas = () => {
     for (let y = 0; y < canvas.height; y++) {
       for (let x = 0; x < canvas.width; x++) {
         const index = y * canvas.width + x;
-        const color = pixelBuffer[index];
-        if (color !== 0xffffffff) {
+        if (pixelBuffer[index] !== 0xffffffff) {
           minX = Math.min(minX, x);
           minY = Math.min(minY, y);
           maxX = Math.max(maxX, x);
@@ -75,10 +91,8 @@ export const DrawCanvas = () => {
     const trimmedCtx = trimmedCanvas.getContext("2d");
 
     if (trimmedCtx) {
-      // Tambahkan ini
       trimmedCtx.fillStyle = "#ffffff";
       trimmedCtx.fillRect(0, 0, cropWidth, cropHeight);
-
       trimmedCtx.drawImage(
         canvas,
         cropX,
@@ -95,14 +109,12 @@ export const DrawCanvas = () => {
     return trimmedCanvas;
   }, []);
 
-  // Handler untuk success export
   const handleExportSuccess = (format: string) => {
     setSuccess(`Berhasil menyimpan sebagai ${format}`);
     setError(null);
     setTimeout(() => setSuccess(null), 3000);
   };
 
-  // Handler untuk error export
   const handleExportError = (error: Error) => {
     setError(error.message);
     setSuccess(null);
@@ -120,7 +132,6 @@ export const DrawCanvas = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Notifikasi */}
       {success && (
         <Alert className="bg-green-50 border-green-200 text-green-800">
           <AlertCircle className="h-4 w-4 text-green-600" />
@@ -135,20 +146,24 @@ export const DrawCanvas = () => {
         </Alert>
       )}
 
-      {/* Area Canvas */}
-      <div className="relative border-2 border-dashed rounded-xl bg-white overflow-hidden group shadow-sm">
+      {/* ✅ Tambah ref ke container */}
+      <div
+        ref={containerRef}
+        className="relative border-2 border-dashed rounded-xl bg-white overflow-hidden group shadow-sm"
+      >
         <SignatureCanvas
           ref={sigCanvas}
           penColor={penColor}
           canvasProps={{
-            className: "w-full h-72 cursor-crosshair",
-            width: 800,
-            height: 300,
+            // ✅ width & height sekarang dinamis dari state
+            width: canvasSize.width,
+            height: canvasSize.height,
+            style: { width: "100%", height: "100%", cursor: "crosshair" },
           }}
           minWidth={penWidth}
           maxWidth={penWidth + 1.5}
           onEnd={() => {
-            setHasSignature(true); // tambah ini
+            setHasSignature(true);
             setError(null);
           }}
         />
@@ -159,8 +174,8 @@ export const DrawCanvas = () => {
         </div>
       </div>
 
+      {/* ... sisa kode sama persis ... */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Kontrol Ketebalan */}
         <div className="space-y-3">
           <div className="flex justify-between">
             <label className="text-sm font-medium">Ketebalan Pena</label>
@@ -173,7 +188,6 @@ export const DrawCanvas = () => {
             max={10}
             step={1}
           />
-          {/* Preview ketebalan */}
           <div className="flex items-center gap-2 mt-2">
             <div className="text-xs text-muted-foreground">Preview:</div>
             <div
@@ -187,7 +201,6 @@ export const DrawCanvas = () => {
           </div>
         </div>
 
-        {/* Kontrol Warna */}
         <div className="space-y-3">
           <label className="text-sm font-medium">Pilih Warna</label>
           <div className="flex items-center gap-3 flex-wrap">
@@ -220,15 +233,16 @@ export const DrawCanvas = () => {
         </div>
       </div>
 
-      {/* Informasi Ukuran Canvas */}
       <div className="bg-muted/30 rounded-lg p-3 text-xs text-muted-foreground">
         <div className="flex justify-between items-center">
-          <span>Ukuran Canvas: 800 x 300 px</span>
+          {/* ✅ Tampilkan ukuran aktual */}
+          <span>
+            Ukuran Canvas: {canvasSize.width} x {canvasSize.height} px
+          </span>
           <span>Background: Transparan</span>
         </div>
       </div>
 
-      {/* Tombol Aksi */}
       <div className="flex flex-col sm:flex-row gap-3 pt-2">
         <Button
           variant="outline"
@@ -238,8 +252,6 @@ export const DrawCanvas = () => {
           <Eraser className="w-4 h-4" />
           Bersihkan Canvas
         </Button>
-
-        {/* Signature Export dengan semua fitur */}
         <div className="flex-1">
           <SignatureExport
             getCanvas={getCanvasForExport}
@@ -251,7 +263,6 @@ export const DrawCanvas = () => {
         </div>
       </div>
 
-      {/* Informasi Fitur */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-[10px] text-center text-muted-foreground border-t pt-4 mt-2">
         <div className="flex flex-col items-center gap-1">
           <span className="font-semibold">PNG</span>
