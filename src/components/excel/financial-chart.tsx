@@ -17,7 +17,7 @@ export function FinancialChart() {
 
   if (!hasData) {
     return (
-      <Card className="border-primary ">
+      <Card className="border-primary " id="financial-chart">
         <CardHeader>
           <CardTitle>Grafik Keuangan</CardTitle>
         </CardHeader>

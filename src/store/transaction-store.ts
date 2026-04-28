@@ -15,9 +15,7 @@ const groupByMonth = (transactions: Transaction[]): MonthlyData[] => {
   const monthlyMap = new Map<string, MonthlyData>();
 
   transactions.forEach((tx) => {
-    console.log("Processing transaction:", tx); // Debug log
     const bulan = tx.tanggal.substring(0, 7); // "2026-04"
-    console.log(bulan);
     if (!monthlyMap.has(bulan)) {
       monthlyMap.set(bulan, {
         bulan,

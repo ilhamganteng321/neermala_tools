@@ -31,7 +31,10 @@ export function FinancialSummary() {
   };
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+    <div
+      id="financial-summary"
+      className="grid grid-cols-1 md:grid-cols-3 gap-4 "
+    >
       <Card className="bg-green-100 border-green-200">
         <CardHeader className="flex flex-row items-center justify-between pb-2">
           <CardTitle className="text-sm font-medium text-green-700">
