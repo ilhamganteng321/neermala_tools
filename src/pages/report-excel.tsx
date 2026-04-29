@@ -3,7 +3,7 @@ import { FinancialSummary } from "@/components/excel/financial-summary";
 import { Button } from "@/components/ui/button";
 import { useTransactionStore } from "@/store/transaction-store";
 import { Download, RefreshCw } from "lucide-react";
-import { FinancialChart } from "../components/excel/financial-chart";
+import { FinancialChart } from "@/components/excel/financial-chart";
 import { TransactionTable } from "@/components/excel/transaction-table";
 import {
   Tooltip,

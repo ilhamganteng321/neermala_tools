@@ -9,6 +9,7 @@ import QuranList from "@/pages/quran";
 import SurahReader from "@/components/quran/quran-read";
 import JsonFormatter from "@/pages/json-formater";
 import ReportExcelPage from "@/pages/report-excel";
+import InvitationMaker from "@/pages/invitation-maker";
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -43,6 +44,7 @@ function App() {
           <Route path="/surah/:noSurat" element={<SurahReader />} />
           <Route path="/json-formater" element={<JsonFormatter />} />
           <Route path="/report-excel" element={<ReportExcelPage />} />
+          <Route path="/invitation-maker" element={<InvitationMaker />} />
         </Routes>
       </BrowserRouter>
     </div>

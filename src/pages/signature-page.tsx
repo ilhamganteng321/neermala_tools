@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { TextToSignature } from "../components/signature/text-to-signature";
-import { DrawCanvas } from "../components/signature/draw-canvas";
+import { TextToSignature } from "@/components/signature/text-to-signature";
+import { DrawCanvas } from "@/components/signature/draw-canvas";
 
 export default function SignaturePage() {
   return (

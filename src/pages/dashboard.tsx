@@ -59,6 +59,15 @@ const TOOLS = [
     color: "hover:border-green-500/50 hover:bg-green-50/30",
   },
   {
+    title: "Wedding Invitation Generator",
+    description:
+      "Buat undangan pernikahan minimalis lengkap dengan QR code dan siap cetak PDF.",
+    icon: <FileText className="w-6 h-6 text-blue-500" />,
+    path: "/invitation-maker",
+    status: "Ready",
+    color: "hover:border-green-500/50 hover:bg-green-50/30",
+  },
+  {
     title: "PDF Watermark",
     description:
       "Tambahkan teks atau logo watermark ke dokumen PDF Anda secara instan.",
