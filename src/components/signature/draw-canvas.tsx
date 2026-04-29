@@ -16,7 +16,7 @@ export const DrawCanvas = () => {
   const [hasSignature, setHasSignature] = useState(false);
   const [canvasSize, setCanvasSize] = useState({ width: 800, height: 300 });
 
-  // ✅ Sync canvas size dengan container
+  // Sync canvas size dengan container — rasio lebih tinggi di mobile
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -25,7 +25,20 @@ export const DrawCanvas = () => {
       for (const entry of entries) {
         const { width } = entry.contentRect;
         const newWidth = Math.floor(width);
-        const newHeight = Math.floor(width * 0.4); // rasio 5:2
+
+        // Mobile (< 480px): rasio 1:1, min 220px
+        // Tablet (480–768px): rasio 3:5
+        // Desktop: rasio 2:5
+        let ratio: number;
+        if (newWidth < 480) {
+          ratio = 0.75; // hampir kotak di HP
+        } else if (newWidth < 768) {
+          ratio = 0.55;
+        } else {
+          ratio = 0.4;
+        }
+
+        const newHeight = Math.max(220, Math.floor(newWidth * ratio));
         setCanvasSize({ width: newWidth, height: newHeight });
       }
     });
@@ -146,19 +159,19 @@ export const DrawCanvas = () => {
         </Alert>
       )}
 
-      {/* ✅ Tambah ref ke container */}
       <div
         ref={containerRef}
         className="relative border-2 border-dashed rounded-xl bg-white overflow-hidden group shadow-sm"
+        // min-height supaya tidak kempes sebelum ResizeObserver jalan
+        style={{ minHeight: "220px" }}
       >
         <SignatureCanvas
           ref={sigCanvas}
           penColor={penColor}
           canvasProps={{
-            // ✅ width & height sekarang dinamis dari state
             width: canvasSize.width,
             height: canvasSize.height,
-            style: { width: "100%", height: "100%", cursor: "crosshair" },
+            style: { width: "100%", height: "100%", cursor: "crosshair", display: "block" },
           }}
           minWidth={penWidth}
           maxWidth={penWidth + 1.5}
@@ -174,7 +187,6 @@ export const DrawCanvas = () => {
         </div>
       </div>
 
-      {/* ... sisa kode sama persis ... */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-3">
           <div className="flex justify-between">
@@ -235,7 +247,6 @@ export const DrawCanvas = () => {
 
       <div className="bg-muted/30 rounded-lg p-3 text-xs text-muted-foreground">
         <div className="flex justify-between items-center">
-          {/* ✅ Tampilkan ukuran aktual */}
           <span>
             Ukuran Canvas: {canvasSize.width} x {canvasSize.height} px
           </span>
