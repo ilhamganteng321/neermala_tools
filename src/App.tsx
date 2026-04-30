@@ -11,6 +11,9 @@ import JsonFormatter from "@/pages/json-formater";
 import ReportExcelPage from "@/pages/report-excel";
 import InvitationMaker from "@/pages/invitation-maker";
 import SlotMachineRandomPicker from "@/pages/slot-machine-random-picker";
+import DebtApp from "./pages/warung-cash-manager";
+import { Toaster } from "sonner";
+import { useTheme } from "next-themes";
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -30,8 +33,16 @@ const Logo = () => {
 };
 
 function App() {
+  const { theme } = useTheme();
+
   return (
     <div className="min-h-screen bg-background">
+      <Toaster
+        position="top-right"
+        duration={3000}
+        theme={theme as "light" | "dark"}
+        closeButton
+      />
       <BrowserRouter>
         <Logo />
         <div className="fixed top-4 right-4 z-50">
@@ -47,6 +58,7 @@ function App() {
           <Route path="/report-excel" element={<ReportExcelPage />} />
           <Route path="/invitation-maker" element={<InvitationMaker />} />
           <Route path="/slot" element={<SlotMachineRandomPicker />} />
+          <Route path="/warung" element={<DebtApp />} />
         </Routes>
       </BrowserRouter>
     </div>
