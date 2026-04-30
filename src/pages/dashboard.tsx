@@ -13,7 +13,11 @@ import {
   Layers,
   BookOpen,
   File,
+  WashingMachine,
+  ToolCaseIcon,
 } from "lucide-react";
+import hidupJokowi from "../assets/mp3/hidup-jokowi.mp3";
+import useSound from "use-sound";
 
 const TOOLS = [
   {
@@ -59,10 +63,19 @@ const TOOLS = [
     color: "hover:border-green-500/50 hover:bg-green-50/30",
   },
   {
+    title: "Slot Machine Random Picker",
+    description:
+      "Pilih pemenang acak dengan animasi slot Las Vegas, support daftar nama & localStorage",
+    icon: <WashingMachine className="w-6 h-6 text-blue-500" />,
+    path: "/slot",
+    status: "Ready",
+    color: "hover:border-green-500/50 hover:bg-green-50/30",
+  },
+  {
     title: "Wedding Invitation Generator",
     description:
       "Buat undangan pernikahan minimalis lengkap dengan QR code dan siap cetak PDF.",
-    icon: <FileText className="w-6 h-6 text-blue-500" />,
+    icon: <ToolCaseIcon className="w-6 h-6 text-blue-500" />,
     path: "/invitation-maker",
     status: "Ready",
     color: "hover:border-green-500/50 hover:bg-green-50/30",
@@ -79,6 +92,7 @@ const TOOLS = [
 ];
 
 export const Dashboard = () => {
+  const [play] = useSound(hidupJokowi);
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       <div className="text-center mb-12">
@@ -146,6 +160,12 @@ export const Dashboard = () => {
           <span className="flex items-center gap-1">
             <div className="w-2 h-2 rounded-full bg-purple-500" /> Fast
           </span>
+          <button
+            onClick={() => play()}
+            className="hover:cursor-pointer flex items-center gap-1"
+          >
+            Jangan di klik
+          </button>
         </div>
         &copy; 2026 Ilham Arip - Build with React & Tailwind
       </footer>

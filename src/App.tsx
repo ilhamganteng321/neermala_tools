@@ -10,6 +10,7 @@ import SurahReader from "@/components/quran/quran-read";
 import JsonFormatter from "@/pages/json-formater";
 import ReportExcelPage from "@/pages/report-excel";
 import InvitationMaker from "@/pages/invitation-maker";
+import SlotMachineRandomPicker from "@/pages/slot-machine-random-picker";
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -45,6 +46,7 @@ function App() {
           <Route path="/json-formater" element={<JsonFormatter />} />
           <Route path="/report-excel" element={<ReportExcelPage />} />
           <Route path="/invitation-maker" element={<InvitationMaker />} />
+          <Route path="/slot" element={<SlotMachineRandomPicker />} />
         </Routes>
       </BrowserRouter>
     </div>
