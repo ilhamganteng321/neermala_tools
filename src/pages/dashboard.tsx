@@ -77,7 +77,7 @@ const TOOLS = [
     description:
       "Catat hutang dan piutang dengan mudah, pantau jatuh tempo, dan kelola keuangan secara rapi dalam satu tempat.",
     icon: <Wallet className="w-6 h-6 text-orange-500" />,
-    path: "/debt-tracker",
+    path: "/warung",
     status: "Ready",
     color: "hover:border-orange-500/50 hover:bg-orange-50/30",
   },
