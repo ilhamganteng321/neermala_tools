@@ -16,6 +16,8 @@ import {
   WashingMachine,
   ToolCaseIcon,
   Wallet,
+  Newspaper,
+  Lightbulb,
 } from "lucide-react";
 import hidupJokowi from "../assets/mp3/hidup-jokowi.mp3";
 import useSound from "use-sound";
@@ -80,6 +82,24 @@ const TOOLS = [
     path: "/warung",
     status: "Ready",
     color: "hover:border-orange-500/50 hover:bg-orange-50/30",
+  },
+  {
+    title: "Funfact Generator",
+    description:
+      "Buat kartu fun fact menarik dengan desain simpel untuk edukasi atau konten sosial media.",
+    icon: <Lightbulb className="w-6 h-6 text-blue-500" />,
+    path: "/funfact",
+    status: "Ready",
+    color: "hover:border-blue-500/50 hover:bg-blue-50/30",
+  },
+  {
+    title: "Newspaper Generator",
+    description:
+      "Buat poster berita bergaya koran vintage dengan teks dan gambar dalam hitungan detik.",
+    icon: <Newspaper className="w-6 h-6 text-yellow-600" />,
+    path: "/newspaper",
+    status: "Ready",
+    color: "hover:border-yellow-500/50 hover:bg-yellow-50/30",
   },
   {
     title: "Wedding Invitation Generator",

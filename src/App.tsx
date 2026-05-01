@@ -14,6 +14,8 @@ import SlotMachineRandomPicker from "@/pages/slot-machine-random-picker";
 import DebtApp from "./pages/warung-cash-manager";
 import { Toaster } from "sonner";
 import { useTheme } from "next-themes";
+import NewspaperPosterGenerator from "./pages/news-paper-generator";
+import { FunFactContainer } from "./components/funfact/funfcat-container";
 
 const Logo = () => {
   const navigate = useNavigate();
@@ -59,6 +61,8 @@ function App() {
           <Route path="/invitation-maker" element={<InvitationMaker />} />
           <Route path="/slot" element={<SlotMachineRandomPicker />} />
           <Route path="/warung" element={<DebtApp />} />
+          <Route path="/newspaper" element={<NewspaperPosterGenerator />} />
+          <Route path="/funfact" element={<FunFactContainer />} />
         </Routes>
       </BrowserRouter>
     </div>

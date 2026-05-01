@@ -162,3 +162,14 @@
     height: auto !important;
   }
 }
+
+@media print {
+  .print\:overflow-visible {
+    overflow: visible !important;
+  }
+
+  .print\:h-auto {
+    height: auto !important;
+    max-height: none !important;
+  }
+}
