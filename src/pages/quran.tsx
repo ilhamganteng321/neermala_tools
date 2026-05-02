@@ -1,6 +1,14 @@
 // src/components/quran.tsx
 import { useState, useMemo } from "react";
-import { Search, BookOpen, MapPin, Hash } from "lucide-react";
+import {
+  Search,
+  BookOpen,
+  MapPin,
+  Hash,
+  Bookmark,
+  Trash2,
+  ChevronRight,
+} from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import quranData from "@/data/m_quran_t.json";
 
@@ -13,11 +21,14 @@ import {
   type FilterType,
   type Surah,
 } from "@/data/const";
+import { useBookmarkStore } from "@/store/quran-bookmark-store";
 
 export default function QuranList() {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedType, setSelectedType] = useState<FilterType>("All");
+
+  const { bookmark, clearBookmark } = useBookmarkStore();
 
   const surahs = quranData as Surah[];
 
@@ -41,7 +52,7 @@ export default function QuranList() {
   return (
     <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
       <div className="mx-auto max-w-6xl px-4 py-4">
-        {/* Header with search and mode toggle */}
+        {/* Header */}
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center justify-between mt-8">
             <div className="flex items-center gap-3">
@@ -78,6 +89,79 @@ export default function QuranList() {
           ))}
         </div>
       </div>
+
+      {/* Bookmark Section — hanya tampil kalau ada bookmark */}
+      {bookmark && (
+        <section className="mx-auto max-w-6xl px-4 pb-2 pt-6">
+          {/* Label */}
+          <div className="mb-2 flex items-center gap-2">
+            <Bookmark className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-400">
+              Terakhir Dibaca
+            </span>
+          </div>
+
+          {/* Card */}
+          <div
+            onClick={() => navigate(`/surah/${bookmark.noSurat}`)}
+            className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 border-amber-400/40 bg-gradient-to-br from-amber-50 to-orange-50 p-5 transition-all hover:border-amber-400/70 hover:shadow-lg hover:shadow-amber-500/10 dark:from-amber-950/30 dark:to-orange-950/20 dark:border-amber-500/30 dark:hover:border-amber-400/50"
+          >
+            {/* Decorative background glow */}
+            <div className="pointer-events-none absolute -right-8 -top-8 h-32 w-32 rounded-full bg-amber-400/10 blur-2xl" />
+
+            <div className="relative flex items-start justify-between gap-4">
+              {/* Left: info */}
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="rounded-lg bg-amber-500 px-2.5 py-0.5 text-xs font-bold text-white shadow-sm">
+                    {bookmark.nmSurat}
+                  </span>
+                  <span className="rounded-lg bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700 dark:bg-amber-900/50 dark:text-amber-300">
+                    Ayat {bookmark.noAyat}
+                  </span>
+                </div>
+
+                {/* Arabic preview */}
+                <p className="text-right font-arabic text-2xl leading-loose text-amber-800 dark:text-amber-200 line-clamp-2 mb-2">
+                  {bookmark.arab}
+                </p>
+
+                {/* Translation preview */}
+                <p
+                  className="text-xs leading-relaxed text-amber-700/70 dark:text-amber-300/60 line-clamp-2"
+                  dangerouslySetInnerHTML={{
+                    __html:
+                      bookmark.tafsir.replace(/<[^>]*>/g, "").slice(0, 100) +
+                      "…",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Footer */}
+            <div className="mt-4 flex items-center justify-between">
+              <span className="text-[10px] text-amber-600/60 dark:text-amber-400/50">
+                {formatRelativeTime(new Date(bookmark.savedAt))}
+              </span>
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    clearBookmark();
+                  }}
+                  className="rounded-lg px-2.5 py-1 text-xs text-amber-600/60 transition-colors hover:bg-amber-200/50 hover:text-red-500 dark:text-amber-400/50 dark:hover:bg-red-900/30"
+                >
+                  <Trash2 className="h-3.5 w-3.5" />
+                </button>
+                <span className="flex items-center gap-1 rounded-lg bg-amber-500 px-3 py-1.5 text-xs font-semibold text-white shadow-sm transition-all group-hover:bg-amber-600">
+                  Lanjut baca
+                  <ChevronRight className="h-3 w-3" />
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Main Content */}
       <main className="mx-auto max-w-6xl px-4 py-6">
@@ -123,6 +207,19 @@ export default function QuranList() {
       </footer>
     </div>
   );
+}
+
+// Helper: relative time
+function formatRelativeTime(date: Date): string {
+  const now = Date.now();
+  const diff = now - date.getTime();
+  const mins = Math.floor(diff / 60000);
+  const hours = Math.floor(diff / 3600000);
+  const days = Math.floor(diff / 86400000);
+  if (mins < 1) return "Baru saja";
+  if (mins < 60) return `${mins} menit lalu`;
+  if (hours < 24) return `${hours} jam lalu`;
+  return `${days} hari lalu`;
 }
 
 // Surah Card Component

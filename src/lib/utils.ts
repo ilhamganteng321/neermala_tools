@@ -64,43 +64,45 @@ export const downloadAsPng = async (
 
   try {
     // Clone element untuk di-capture tanpa scroll
-    const cloneContainer = document.createElement('div');
-    cloneContainer.style.position = 'absolute';
-    cloneContainer.style.top = '-9999px';
-    cloneContainer.style.left = '-9999px';
+    const cloneContainer = document.createElement("div");
+    cloneContainer.style.position = "absolute";
+    cloneContainer.style.top = "-9999px";
+    cloneContainer.style.left = "-9999px";
     cloneContainer.style.width = `${originalElement.offsetWidth}px`;
     document.body.appendChild(cloneContainer);
-    
+
     // Clone konten
     const clone = originalElement.cloneNode(true) as HTMLElement;
-    
+
     // Hilangkan scroll di clone
-    const scrollElements = clone.querySelectorAll('[class*="overflow-y-auto"], [style*="overflow-y"]');
+    const scrollElements = clone.querySelectorAll(
+      '[class*="overflow-y-auto"], [style*="overflow-y"]',
+    );
     scrollElements.forEach((el) => {
       if (el instanceof HTMLElement) {
-        el.style.overflow = 'visible';
-        el.style.maxHeight = 'none';
-        el.style.height = 'auto';
+        el.style.overflow = "visible";
+        el.style.maxHeight = "none";
+        el.style.height = "auto";
       }
     });
-    
+
     // Set ukuran clone
     clone.style.width = `${originalElement.offsetWidth}px`;
-    clone.style.margin = '0';
-    clone.style.padding = '0';
-    
+    clone.style.margin = "0";
+    clone.style.padding = "0";
+
     cloneContainer.appendChild(clone);
-    
+
     // Capture clone
-    const dataUrl = await toPng(cloneContainer, { 
-      quality: 1, 
+    const dataUrl = await toPng(cloneContainer, {
+      quality: 1,
       pixelRatio: 2,
-      backgroundColor: '#ffffff'
+      backgroundColor: "#ffffff",
     });
-    
+
     // Cleanup
     document.body.removeChild(cloneContainer);
-    
+
     // Download
     const link = document.createElement("a");
     link.download = filename;

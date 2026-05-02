@@ -9,13 +9,15 @@ import {
   Eye,
   EyeOff,
   Palette,
+  Bookmark,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import type { Ayat, Surah } from "@/data/const";
 import surahList from "@/data/m_quran_t.json";
 import ayatData from "@/data/m_surat_t.json";
-import { useReaderStore, ARABIC_COLORS } from "@/store/quran-reqder-settings";
+import { useReaderStore, ARABIC_COLORS } from "@/store/quran-reader-settings";
+import { useBookmarkStore } from "@/store/quran-bookmark-store";
 
 const AYAT_PER_PAGE = 10;
 
@@ -30,7 +32,6 @@ export default function SurahReader() {
   const [loadingMore, setLoadingMore] = useState(false);
   const [showColorPicker, setShowColorPicker] = useState(false);
 
-  // Zustand store — persisted ke localStorage
   const {
     showTranslation,
     arabicColorIndex,
@@ -42,7 +43,6 @@ export default function SurahReader() {
   const lastAyatRef = useRef<HTMLDivElement | null>(null);
   const colorPickerRef = useRef<HTMLDivElement | null>(null);
 
-  // Tutup color picker kalau klik di luar
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -56,7 +56,6 @@ export default function SurahReader() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Load surah info
   useEffect(() => {
     const surahInfo = (surahList as Surah[]).find(
       (s) => s.no_surat === Number(noSurat),
@@ -64,7 +63,6 @@ export default function SurahReader() {
     setSurah(surahInfo || null);
   }, [noSurat]);
 
-  // Load semua ayat untuk surah ini
   useEffect(() => {
     if (!noSurat) return;
     setLoading(true);
@@ -76,13 +74,11 @@ export default function SurahReader() {
     setLoading(false);
   }, [noSurat]);
 
-  // Update displayed ayat saat page berubah
   useEffect(() => {
     const end = currentPage * AYAT_PER_PAGE;
     setDisplayedAyat(allAyat.slice(0, end));
   }, [currentPage, allAyat]);
 
-  // Infinite scroll
   const loadMore = useCallback(() => {
     if (displayedAyat.length < allAyat.length && !loadingMore) {
       setLoadingMore(true);
@@ -93,9 +89,16 @@ export default function SurahReader() {
     }
   }, [displayedAyat.length, allAyat.length, loadingMore]);
 
+  const navigateToPrevSurah = () => {
+    if (Number(noSurat) > 1) navigate(`/surah/${Number(noSurat) - 1}`);
+  };
+
+  const navigateToNextSurah = () => {
+    if (Number(noSurat) < 114) navigate(`/surah/${Number(noSurat) + 1}`);
+  };
+
   useEffect(() => {
     if (observerRef.current) observerRef.current.disconnect();
-
     observerRef.current = new IntersectionObserver(
       (entries) => {
         if (
@@ -107,9 +110,7 @@ export default function SurahReader() {
       },
       { threshold: 0.1 },
     );
-
     if (lastAyatRef.current) observerRef.current.observe(lastAyatRef.current);
-
     return () => observerRef.current?.disconnect();
   }, [displayedAyat.length, allAyat.length, loadMore]);
 
@@ -162,7 +163,6 @@ export default function SurahReader() {
               </p>
             </div>
 
-            {/* Kontrol kanan */}
             <div className="flex items-center gap-1">
               {/* Toggle Terjemahan */}
               <Button
@@ -220,7 +220,7 @@ export default function SurahReader() {
                           }`}
                         >
                           <span
-                            className="h-3.5 w-3.5 flex-shrink-0 rounded-full border border-border/50"
+                            className="h-3.5 w-3.5 shrink-0 rounded-full border border-border/50"
                             style={{ backgroundColor: color.hex }}
                           />
                           <span>{color.label}</span>
@@ -264,6 +264,7 @@ export default function SurahReader() {
             <AyatCard
               key={ayat.no_ayat}
               ayat={ayat}
+              surahName={surah.nm_surat}
               isLast={index === displayedAyat.length - 1}
               ref={index === displayedAyat.length - 1 ? lastAyatRef : null}
               showTranslation={showTranslation}
@@ -287,7 +288,28 @@ export default function SurahReader() {
           <div className="py-8 text-center">
             <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 px-4 py-2 text-sm text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400">
               <BookOpen className="h-4 w-4" />
-              <span>Telah sampai pada akhir surah</span>
+              <div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={navigateToPrevSurah}
+                  disabled={Number(noSurat) === 1}
+                  className="gap-1"
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  <span className="hidden sm:inline">Sebelumnya</span>
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={navigateToNextSurah}
+                  disabled={Number(noSurat) === 114}
+                  className="gap-1"
+                >
+                  <ChevronRight className="h-4 w-4" />
+                  <span className="hidden sm:inline">Selanjutnya</span>
+                </Button>
+              </div>
             </div>
           </div>
         )}
@@ -329,22 +351,61 @@ const AyatCard = forwardRef<
   HTMLDivElement,
   {
     ayat: Ayat;
+    surahName: string;
     isLast: boolean;
     showTranslation: boolean;
     arabicColorClass: string;
   }
->(({ ayat, showTranslation, arabicColorClass }, ref) => {
+>(({ ayat, surahName, showTranslation, arabicColorClass }, ref) => {
+  const { setBookmark, clearBookmark, isBookmarked } = useBookmarkStore();
+  const bookmarked = isBookmarked(ayat.no_surat, ayat.no_ayat);
+
+  const handleBookmarkToggle = () => {
+    if (bookmarked) {
+      clearBookmark();
+    } else {
+      // Replace bookmark lama otomatis
+      setBookmark({
+        noSurat: ayat.no_surat,
+        noAyat: ayat.no_ayat,
+        nmSurat: surahName,
+        arab: ayat.arab,
+        tafsir: ayat.tafsir,
+        savedAt: Date.now(),
+      });
+    }
+  };
+
   return (
     <div
       ref={ref}
-      className="group rounded-xl border border-border bg-card p-4 transition-all hover:border-emerald-500/30 hover:shadow-md sm:p-6"
+      className={`group rounded-xl border bg-card p-4 transition-all hover:shadow-md sm:p-6 ${
+        bookmarked
+          ? "border-amber-400/50 shadow-sm shadow-amber-500/10 dark:border-amber-500/40"
+          : "border-border hover:border-emerald-500/30"
+      }`}
     >
-      {/* Ayat Number */}
+      {/* Ayat Number + Bookmark */}
       <div className="mb-3 flex items-center gap-2">
         <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-500/10 text-xs font-medium text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-400">
           {ayat.no_ayat}
         </div>
         <div className="h-px flex-1 bg-linear-to-r from-emerald-500/20 to-transparent" />
+
+        {/* Bookmark button — selalu terlihat, beda state */}
+        <button
+          onClick={handleBookmarkToggle}
+          title={bookmarked ? "Hapus bookmark" : "Simpan bookmark"}
+          className={`flex h-7 w-7 items-center justify-center rounded-full transition-all ${
+            bookmarked
+              ? "bg-amber-500/15 text-amber-500 hover:bg-amber-500/25"
+              : "text-muted-foreground hover:bg-amber-500/10 hover:text-amber-500"
+          }`}
+        >
+          <Bookmark
+            className={`h-3.5 w-3.5 transition-all ${bookmarked ? "fill-amber-500" : ""}`}
+          />
+        </button>
       </div>
 
       {/* Arabic Text */}
